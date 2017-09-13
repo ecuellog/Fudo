@@ -9,6 +9,7 @@
   "author": "Edgardo Cuello",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31"
   }
 }
