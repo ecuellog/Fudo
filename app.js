@@ -14,5 +14,4 @@ app.use(function(req, res, next){
 });
 
 app.listen(port);
-console.log('Express server running on port ');
-console.log(port);
+console.log('Express server running on port ' + port);
