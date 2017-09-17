@@ -9,8 +9,10 @@
   "author": "Edgardo Cuello",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.15.4",
     "express-vue": "^4.0.11",
-    "mongodb": "^2.2.31"
+    "mongodb": "^2.2.31",
+    "vue": "^2.4.4"
   }
 }
