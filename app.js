@@ -11,10 +11,14 @@ app.set('view engine', 'html');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 app.use('/', function(req, res, next){
 	res.render('index');
 	return next();
 });
+
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect bootstrap CSS
 
 app.listen(port);
 console.log('Express server running on port ' + port);

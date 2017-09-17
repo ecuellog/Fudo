@@ -16,3 +16,10 @@ new Vue({
     <h2> My Component </h2>
   `
 })
+
+/* 
+ * Notes: component.js
+ * will include all components
+ * just include with script tag within html view.
+ */
+
