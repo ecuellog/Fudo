@@ -1,19 +1,21 @@
 //import Vue from 'vue';
 //import App from '../views/index.vue'
- 
+
 console.log('Inside');
 
 var app = new Vue({
-	el: '#app',
+  el: '#app',
   data: {
     name: 'Edgardo'
   }
 })
 
 new Vue({
-  el: '#component',
+  el: '#navBar',
   template: `
-    <h2> My Component </h2>
+    <nav class='navbar fixed-top navbar-inverse bg-inverse'>
+      <a class='navbar-brand text-warning' href='#'> Fudo </a>
+    </nav>
   `
 })
 
