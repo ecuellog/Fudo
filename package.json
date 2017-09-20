@@ -2,7 +2,7 @@
   "name": "fudo",
   "version": "1.0.0",
   "description": "An web application for world recipes",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

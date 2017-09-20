@@ -13,8 +13,9 @@ var app = new Vue({
 new Vue({
   el: '#navBar',
   template: `
-    <nav class='navbar fixed-top navbar-inverse bg-inverse'>
-      <a class='navbar-brand text-warning' href='#'> Fudo </a>
+  	<nav class='navbar fixed-top navbar-purple'>
+    	<a class='navbar-brand navbar-link fudo-home' href='#'> Fudo </a>
+		<a class='navbar-brand navbar-link' href='#'> Login </a>
     </nav>
   `
 })

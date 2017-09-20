@@ -1,0 +1,24 @@
+.page-background{
+	background-color: #F8EEE7;
+}
+.navbar-purple{
+	background-color: #94618E;
+}
+
+.navbar-link{
+	color: black;	
+	font-family: "Delius Swash Caps";
+	line-height: 50px;
+	padding: 10px;
+	height: 10px;
+	float: none;
+}
+.fudo-home{
+	font-size: 24px;
+}
+a:hover, a:active{
+	color: #49274A;
+}
+a:focus{
+	color: black;
+}
