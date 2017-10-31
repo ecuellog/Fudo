@@ -18,8 +18,6 @@ app.use('/', function(req, res, next){
 	next();
 });
 
-
-
 app.use(function(req, res, next){
   res.end();
 });
