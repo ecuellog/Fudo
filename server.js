@@ -24,7 +24,7 @@ app.use(function(req, res, next){
 });
 
 //listener
-port = process.argv[2] || 3000;
+port = process.argv[2] || 3001;
 app.listen(port, function(){
   console.log("Listening on port " + port);
 });

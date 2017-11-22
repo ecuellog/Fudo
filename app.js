@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
 
-port = process.argv[2] || 3000;
+port = process.argv[2] || 3001;
 
 var app = express();
 
