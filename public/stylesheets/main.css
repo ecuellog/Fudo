@@ -1,0 +1,27 @@
+body{
+	margin: 0px;
+}
+
+ul.nav-bar{
+		margin: 0px;
+    background-color: #ed6d7c;
+    padding: 20px;
+    z-index: 1;
+}
+
+li.nav-bar{
+  display: inline;
+  color: black;
+  padding: 8px 16px;
+}
+
+.nav-link{
+  font-size: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.float-right{
+	float: right;
+	margin-right: 30px;
+}
