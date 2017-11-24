@@ -4,7 +4,8 @@ myApp.directive("navBar", function(){
 		templateUrl: "public/directives/navBar.html"
 	};
 });
-myApp.controller("navBarCtrl", [$scope, function($scope){
+
+myApp.controller("navBarCtrl", ["$scope", function($scope){
 	$scope.accountStatus = "Login";
 }]);
 
