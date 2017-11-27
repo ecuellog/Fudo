@@ -6,5 +6,5 @@ myApp.directive("navBar", function(){
 });
 
 myApp.controller("navBarCtrl", ["$scope", function($scope){
-	$scope.accountStatus = "Login";
+	$scope.accountStatus = "Sign In";
 }]);
