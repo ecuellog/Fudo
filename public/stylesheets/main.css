@@ -5,7 +5,7 @@ body{
 ul.nav-bar{
 	margin: 0px;
   background-color: #E1B1AF;
-  padding: 10px;
+  padding: 8px;
   z-index: 1;
 	text-align: center;
 }
@@ -36,6 +36,7 @@ li.nav-bar{
 	width: 30%;
 	margin: auto;
 	text-align: center;
+	padding: 2px 2px;
 }
 
 input.search-bar{
@@ -44,6 +45,9 @@ input.search-bar{
 }
 
 .fa-search{
-	font-size: large;
-	margin: 0px 10px 0px 10px;
+	font-size: 21px;
+}
+
+a.search-icon{
+	padding: 0px 10px 0px 10px;
 }
