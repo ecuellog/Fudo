@@ -5,14 +5,17 @@
 </head>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="public/app.js"></script>
+<script type="text/javascript" src="public/appRouter.js"></script>
 <script type="text/javascript" src="public/directives/navBar.js"></script>
 <link rel="stylesheet" type="text/css" href="public/stylesheets/main.css">
 <body>
 
-<div ng-app="myApp">
-  <div nav-bar></div>
-</div>
+  <div ng-app="myApp">
+    <div nav-bar></div>
+    <div ng-view></div>
+  </div>
 
 </body>
 </html>

@@ -9,6 +9,7 @@
   "author": "Edgardo Cuello",
   "license": "ISC",
   "dependencies": {
+    "angular-route": "^1.6.4",
     "bootstrap": "^3.3.7",
     "ejs": "^2.5.7",
     "express": "^4.15.4",

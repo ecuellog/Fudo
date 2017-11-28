@@ -13,6 +13,7 @@ app.set("view engine", "html");
 
 //setup for directories
 app.use("/public", express.static(path.join(__dirname, "public")));
+app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js"))); // redirect bootstrap JS
 app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))); // redirect bootstrap CSS
 
