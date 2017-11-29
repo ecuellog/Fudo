@@ -2,6 +2,10 @@ body{
 	margin: 0px;
 }
 
+div{
+	display: flow-root;
+}
+
 ul.nav-bar{
 	margin: 0px;
   background-color: #E1B1AF;
@@ -50,4 +54,12 @@ input.search-bar{
 
 a.search-icon{
 	padding: 0px 10px 0px 10px;
+}
+
+.heading-area{
+	height: 500px;
+	width: 100%;
+	background-color: #D8E5F1;
+	text-align: center;
+	border: 0;
 }
