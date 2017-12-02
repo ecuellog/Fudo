@@ -2,10 +2,6 @@ body{
 	margin: 0px;
 }
 
-div{
-	display: flow-root;
-}
-
 ul.nav-bar{
 	margin: 0px;
   background-color: #E1B1AF;
@@ -61,5 +57,5 @@ a.search-icon{
 	width: 100%;
 	background-color: #D8E5F1;
 	text-align: center;
-	border: 0;
+	display: inline-block;
 }
