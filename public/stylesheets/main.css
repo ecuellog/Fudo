@@ -13,7 +13,7 @@ ul.nav-bar{
 li.nav-bar{
   display: inline;
   color: white;
-  padding: 8px 16px;
+  padding: 0;
 }
 
 .nav-link{
@@ -22,6 +22,10 @@ li.nav-bar{
   padding-right: 20px;
 	color: white;
 	text-decoration: none;
+}
+
+.fudo-link{
+	transform: translateY(-5px);
 }
 
 .float-right{
@@ -37,6 +41,8 @@ li.nav-bar{
 	margin: auto;
 	text-align: center;
 	padding: 2px 2px;
+	margin-bottom: 3px;
+	border: 0px;
 }
 
 input.search-bar{
@@ -50,6 +56,7 @@ input.search-bar{
 
 a.search-icon{
 	padding: 0px 10px 0px 10px;
+	display: inline-block;
 }
 
 .heading-area{
@@ -57,5 +64,42 @@ a.search-icon{
 	width: 100%;
 	background-color: #D8E5F1;
 	text-align: center;
-	display: inline-block;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.font-pacifico{
+	font-family: 'Pacifico';
+	text-rendering: optimizeLegibility; 
+	font-weight: normal;
+}
+
+.font-poiret{
+	font-family: 'Poiret One', cursive;
+}
+
+h1{
+	font-size: 100px;
+	margin: 0;
+}
+
+h4{
+	font-size: 25px;
+	margin: 20px;
+}
+
+hr{
+	width: 50%;
+	margin: -10px auto -10px auto;
+}
+
+.h-center-div{
+	margin: 0 auto;
 }
