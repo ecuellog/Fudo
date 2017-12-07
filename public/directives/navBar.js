@@ -5,26 +5,6 @@ myApp.directive("navBar", function(){
 	};
 });
 
-myApp.controller("navBarCtrl", ["$scope", "ModalService", function($scope, ModalService){
+myApp.controller("navBarCtrl", ["$scope", function($scope){
 	$scope.accountStatus = "Sign In";
-
-	var vm = this;
-	$scope.vm = vm;
-
-	vm.openModal = openModal;
-	vm.closeModal = closeModal;
-
-  initController();
-
-  function initController() {
-    vm.bodyText = 'This text can be updated in modal 1';
-  }
-  
-  function openModal(id){
-    ModalService.Open(id);
-  }
-
-  function closeModal(id){
-    ModalService.Close(id);
-  }
 }]);
