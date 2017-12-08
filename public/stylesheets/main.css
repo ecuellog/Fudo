@@ -1,5 +1,6 @@
 body{
 	margin: 0px;
+	line-height: initial;
 }
 
 ul.nav-bar{
@@ -20,8 +21,8 @@ li.nav-bar{
   font-size: 24px;
   padding-left: 20px;
   padding-right: 20px;
-	color: white;
-	text-decoration: none;
+	color: white !important;
+	text-decoration: none !important;
 }
 
 .fudo-link{
@@ -40,13 +41,13 @@ li.nav-bar{
 	width: 30%;
 	margin: auto;
 	text-align: center;
-	padding: 2px 2px;
+	padding: 3px 3px;
 	margin-bottom: 3px;
 	border: 0px;
 }
 
 input.search-bar{
-	height: 25px;
+	height: 30px;
 	font-size: 16px;
 }
 
@@ -102,4 +103,20 @@ hr{
 
 .h-center-div{
 	margin: 0 auto;
+}
+
+.center-text{
+	text-align: center;
+}
+
+input{
+	padding: 5px 5px 5px 5px;
+}
+
+.font-size-30{
+	font-size: 22px;
+}
+
+.btn{
+	border-radius: 0px;
 }
