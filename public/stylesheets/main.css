@@ -120,3 +120,11 @@ input{
 .btn{
 	border-radius: 0px;
 }
+
+.margin-top-15{
+	margin-top: 15px;
+}
+
+.margin-bottom-0{
+	margin-bottom: 0px;
+}
