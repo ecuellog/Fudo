@@ -8,6 +8,7 @@ var bodyParser = require("body-parser");
 
 //server routes
 var index = require("./routes/index.js")(passport);
+var api = require("./routes/api.js");
 
 var app = express();
 
@@ -37,6 +38,7 @@ app.use(flash());
 
 //routes
 app.use("/", index);
+app.use("/api", index);
 
 app.use(function(req, res, next){
   res.end();

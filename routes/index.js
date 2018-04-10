@@ -3,18 +3,21 @@ var router = express.Router();
 
 module.exports = function(passport){
 	router.get("/", function(req, res, next){
-	  res.render("index");
+	  res.render("index", { message: req.flash("loginMessage")});
 	});
 
-	router.post("/login", passport.authenticate("login", { 
-			successRedirect: "/",
-			failureFlash: true 
-		})
-	);
+	router.post("/login", function(req, res, next){
+		console.log("heyy")
+		passport.authenticate("login", function(err, user, info){
+			if(!user){
+				return res.send(JSON.stringify({flashMessage: "Invalid username or password."}))
+			}
+			return res.redirect("/");
+		})(req, res, next);
+	});
 
-	router.post("/register", passport.authenticate("register", {
-			successRedirect: "/",
-			failureFlash: true
+	router.post("/register", passport.authenticate("register", function(req, res){
+			res.send(JSON.stringify({flashMessage: "You have successfully registered!"}))
 		})
 	);
 
@@ -22,5 +25,6 @@ module.exports = function(passport){
 		req.logout();
 		res.redirect("/");
 	});
+	
 	return router;
 }

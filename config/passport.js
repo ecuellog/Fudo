@@ -1,6 +1,7 @@
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 var User = require("../models/user");
+var sha256 = require("sha256");
 
 passport.serializeUser(function(user, done){
 	done(null, user.id)
@@ -20,10 +21,10 @@ passport.use("login", new LocalStrategy(
 				return done(err);
 			}
 			if(!user){
-				return done(null, false, {message: "Username not found"});
+				return done(null, false);
 			}
 			if(!user.validPassword(password)){
-				return done(null, false, {message: "Wrong password"});
+				return done(null, false);
 			}
 
 			return done(null, user);
@@ -40,12 +41,12 @@ passport.use("register", new LocalStrategy({
 				return done(err);
 			}
 			if(user){
-				return done(null, false, {message: "Username taken"});
+				return done(null, false, {flashMessage: "Username taken"});
 			} else {
 				var newUser = new User();
 
 				newUser.username = username;
-				newUser.passwordHash = generateHash(password);
+				newUser.passwordHash = sha256(password);
 				newUser.email = req.param("email");
 				newUser.save(function(err){
 					if(err){
