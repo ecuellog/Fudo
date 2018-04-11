@@ -4,8 +4,11 @@ var mongoose = require("mongoose");
 var bcrypt = require("bcrypt");
 var User = require("../models/user.js")
 
+mongoose.Promise = Promise;
+
 router.post("/register", function(req, res, next){
 	console.log("HEYYYYY");
+	console.log(req.body);
 	User.findOne({email: req.body.email})
 		.exec()
 		.then(user => {
