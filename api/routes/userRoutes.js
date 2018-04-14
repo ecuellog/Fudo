@@ -7,7 +7,6 @@ var User = require("../models/user.js")
 mongoose.Promise = Promise;
 
 router.post("/register", function(req, res, next){
-	console.log("HEYYYYY");
 	console.log(req.body);
 	User.findOne({email: req.body.email})
 		.exec()
@@ -18,6 +17,7 @@ router.post("/register", function(req, res, next){
 				})
 			} else {
 				var user = new User({
+					name: req.body.name,
 					email: req.body.email,
 					passwordHash: bcrypt.hashSync(req.body.password, 10)
 				});

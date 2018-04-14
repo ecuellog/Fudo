@@ -14,6 +14,13 @@ app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
+app.use(function(req, res, next){
+  res.set("Access-Control-Allow-Origin", "*");
+  res.set("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS");
+  res.set("Access-Control-Allow-Headers", "Origin, Content-Type, X-Auth-Token");
+  next();
+});
+
 //routes
 app.use("/user", userRoutes);
 
