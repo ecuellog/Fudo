@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
 var bcrypt = require("bcrypt");
+var jwt = require("jsonwebtoken");
 var User = require("../models/user.js")
 
 mongoose.Promise = Promise;
@@ -45,23 +46,37 @@ router.post("/login", function(req,res,next){
 		.then(user => {
 			if(!user){
 				return res.status(401).json({
-					message: "Wrong email or password"
+					message: "Wrong email or password: user does not exist CHANGE"
 				});
 			} else {
-				bcrypt.compare(req.body.password, user.password, (err, result) => {
+				bcrypt.compare(req.body.password, user.passwordHash, (err, result) => {
 					if(err){
 						return res.status(401).json({
-							message: "Wrong email or password"
+							message: "Wrong email or password: wrong pass CHANGE"
 						});
 					}
+					//Username and password correct
 					if(result){
+						var token = jwt.sign({
+								userId: user._id,
+								name: user.name,
+								email: user.email
+							},
+							"secret123",
+							{
+								expiresIn: "12h"
+								//add IP address of client later? To authenticate token for that ip address only
+							}
+						);
 						return res.status(200).json({
-							message: "Wrong email or password"
+							message: "Auth successful",
+							token: token
 						});
 					}
-					res.status(401).json({
+					//password incorrect
+					return res.status(401).json({
 						message: "Wrong email or password"
-					})
+					});
 				});
 			}
 		})

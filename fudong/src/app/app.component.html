@@ -5,7 +5,8 @@
       <input type="text" class="search-bar" placeholder="search recipes">
       <a class="nav-link search-icon" href="#"><i class="fa fa-search"></i></a>
     </li>
-    <li class="nav-bar"><a class="nav-link float-right font-poiret" data-toggle="modal" data-target="#loginModal" href="#"> Login </a></li>
+    <li class="nav-bar" *ngIf="loggedIn"><a class="nav-link float-right font-poiret" data-toggle="modal" data-target="#loginModal" href="#"> Account </a></li>
+    <li class="nav-bar" *ngIf="!loggedIn"><a class="nav-link float-right font-poiret" data-toggle="modal" data-target="#loginModal" href="#"> Login </a></li>
   </ul>
 </div>
 

@@ -7,13 +7,20 @@ export class ApicallService {
 
   constructor(private http: HttpClient) {}
 
-  register(params){
+  sendPost(path, params){
   	var headers = new HttpHeaders();
   	headers = headers.set('Content-Type','application/json');
   	params = JSON.stringify(params);
-  	console.log(headers);
-  	return this.http.post('http://localhost:3001/user/register', params, {
+  	return this.http.post('http://localhost:3001' + path, params, {
   		headers: headers
-  	})
+  	});
+  }
+
+  register(params){
+  	return this.sendPost('/user/register', params);
+  }
+
+  login(params){
+  	return this.sendPost('/user/login', params);
   }
 }
