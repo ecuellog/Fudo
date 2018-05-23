@@ -9,4 +9,4 @@ In other terminal:
 cd fudong/  
 ng serve  
   
-Browse to localhost:3001
+Browse to localhost:4200
